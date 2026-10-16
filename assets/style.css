@@ -77,7 +77,7 @@ a{color:var(--gold-200);text-decoration:none}a:hover{color:var(--text)}
 .fig-card[data-stage="website"] .browser{opacity:1;transform:none}
 
 /* ── stage looks: CSS theme variables per stage; the geometry never forks ─── */
-.fig-card[data-stage="napkin"]{--fig-bg:#E9E3D6;--fig-meta:#6d675b;
+.fig-card[data-stage="napkin"]{--fig-bg:#E9E3D6;--fig-meta:#57524a;
   --anatomy-paper:#F5F0E4;--anatomy-face:#F5F0E4;--anatomy-top:#F5F0E4;--anatomy-shade-0:#F5F0E4;--anatomy-shade-1:#F5F0E4;--anatomy-shade-2:#F5F0E4;--anatomy-shade-3:#F5F0E4;
   --anatomy-hi:#1d2433;--anatomy-mid:#2b3242;--anatomy-lo:#9a9384;--anatomy-faint:#cfc7b6;--anatomy-lit:#1d2433;--anatomy-dot:#1d2433;--anatomy-halo:#8e8670;--anatomy-halo-opacity:.35;--anatomy-weight:1.3px}
 .fig-card[data-stage="napkin"] [data-bulb],.fig-card[data-stage="napkin"] .socket{filter:url(#pen)}

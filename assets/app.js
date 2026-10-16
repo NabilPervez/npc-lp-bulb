@@ -165,7 +165,8 @@
     if (figVisible) kick();
   }).observe(card);
 
-  // ── pricing cards ───────────────────────────────────────────────────────
+  // ── pricing cards (built when the pricing section comes near, to keep first paint light)
+  function buildPricing() {
   const cards = $("[data-cards]");
   cards.innerHTML = STAGES.map(
     (s) => `<article class="card" data-card="${s.id}">
@@ -210,6 +211,14 @@
   bundle.addEventListener("mouseleave", stopMorph);
   bundle.addEventListener("focusout", stopMorph);
   new IntersectionObserver((e) => (phone.matches && e[0].isIntersecting ? startMorph() : stopMorph()), { threshold: 0.5 }).observe(bundle);
+
+  }
+  const pricingIO = new IntersectionObserver((e) => {
+    if (!e[0].isIntersecting) return;
+    pricingIO.disconnect();
+    buildPricing();
+  }, { rootMargin: "800px 0px" });
+  pricingIO.observe($("#pricing"));
 
   // ── configurator: the bulb assembles from the stages you pick ───────────
   const PAID = STAGES.slice(1);
